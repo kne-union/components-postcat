@@ -1,0 +1,1942 @@
+{
+  "msg": {
+    "format": "string",
+    "description": "No comments found.",
+    "type": "string"
+  },
+  "data": {
+    "description": "No comments found.",
+    "type": "array",
+    "items": {
+      "properties": {
+        "resume": {
+          "description": "标准简历信息(object)",
+          "type": "object",
+          "properties": {
+            "id": {
+              "format": "int64",
+              "description": "简历id",
+              "type": "integer"
+            },
+            "channel": {
+              "format": "int32",
+              "description": "简历渠道 ChannelEnum",
+              "type": "integer"
+            },
+            "otherChannelName": {
+              "format": "string",
+              "description": "其他渠道名称",
+              "type": "string"
+            },
+            "createWay": {
+              "format": "int32",
+              "description": "简历入库方式 CreateWayEnum",
+              "type": "integer"
+            },
+            "completeScore": {
+              "format": "int32",
+              "description": "简历完整度 0~100",
+              "type": "integer"
+            },
+            "photo": {
+              "format": "string",
+              "description": "照片",
+              "type": "string"
+            },
+            "name": {
+              "format": "string",
+              "description": "姓名",
+              "type": "string"
+            },
+            "gender": {
+              "format": "string",
+              "description": "性别 M:男/F:女",
+              "type": "string"
+            },
+            "birth": {
+              "format": "string",
+              "description": "出生日期",
+              "type": "string"
+            },
+            "age": {
+              "format": "int8",
+              "description": "年龄",
+              "type": "integer"
+            },
+            "birthFromAge": {
+              "format": "boolean",
+              "description": "birth是否由age换算",
+              "type": "boolean"
+            },
+            "degree": {
+              "format": "int32",
+              "description": "学历 解析时直接获取。标准简历取教育经历 最高学历",
+              "type": "integer"
+            },
+            "currentLocation": {
+              "format": "string",
+              "description": "现居城市",
+              "type": "string"
+            },
+            "phoneRegionCode": {
+              "format": "string",
+              "description": "电话国家代码",
+              "type": "string"
+            },
+            "phone": {
+              "format": "string",
+              "description": "电话",
+              "type": "string"
+            },
+            "phoneCheck": {
+              "description": "电话空号检测(object)",
+              "type": "object",
+              "properties": {
+                "status": {
+                  "format": "int8",
+                  "description": "号码状态 0-空号，1-实号，2-停机，3-库无，4-沉默号，5-风险号",
+                  "type": "integer"
+                },
+                "updatedAt": {
+                  "format": "string",
+                  "description": "检查时间",
+                  "type": "string"
+                }
+              }
+            },
+            "virtualPhone": {
+              "format": "string",
+              "description": "虚拟电话",
+              "type": "string"
+            },
+            "virtualPhoneTime": {
+              "format": "string",
+              "description": "虚拟电话到期时间",
+              "type": "string"
+            },
+            "otherPhoneRegionCode": {
+              "format": "string",
+              "description": "更多电话国家代码",
+              "type": "string"
+            },
+            "otherPhone": {
+              "format": "string",
+              "description": "更多电话",
+              "type": "string"
+            },
+            "otherPhoneCheck": {
+              "description": "更多电话空号检测(object)",
+              "type": "object",
+              "properties": {
+                "status": {
+                  "format": "int8",
+                  "description": "号码状态 0-空号，1-实号，2-停机，3-库无，4-沉默号，5-风险号",
+                  "type": "integer"
+                },
+                "updatedAt": {
+                  "format": "string",
+                  "description": "检查时间",
+                  "type": "string"
+                }
+              }
+            },
+            "email": {
+              "format": "string",
+              "description": "邮箱",
+              "type": "string"
+            },
+            "otherEmail": {
+              "format": "string",
+              "description": "更多邮箱",
+              "type": "string"
+            },
+            "wechat": {
+              "format": "string",
+              "description": "微信",
+              "type": "string"
+            },
+            "cardType": {
+              "format": "int32",
+              "description": "证件类型",
+              "type": "integer"
+            },
+            "card": {
+              "format": "string",
+              "description": "证件",
+              "type": "string"
+            },
+            "nativePlace": {
+              "format": "string",
+              "description": "籍贯",
+              "type": "string"
+            },
+            "marital": {
+              "format": "string",
+              "description": "婚姻状况(Y：已婚；N：未婚)",
+              "type": "string"
+            },
+            "race": {
+              "format": "int32",
+              "description": "民族",
+              "type": "integer"
+            },
+            "nationality": {
+              "format": "string",
+              "description": "国籍",
+              "type": "string"
+            },
+            "politicalStatus": {
+              "format": "string",
+              "description": "政治面貌",
+              "type": "string"
+            },
+            "height": {
+              "format": "int32",
+              "description": "身高 (cm)",
+              "type": "integer"
+            },
+            "weight": {
+              "format": "int32",
+              "description": "体重（kg）",
+              "type": "integer"
+            },
+            "currentStatus": {
+              "format": "int32",
+              "description": "求职意向",
+              "type": "integer"
+            },
+            "currentType": {
+              "format": "int32",
+              "description": "求职类型",
+              "type": "integer"
+            },
+            "currentSalary": {
+              "format": "string",
+              "description": "当前薪资",
+              "type": "string"
+            },
+            "currentSalaryType": {
+              "format": "int32",
+              "description": "当前薪资类型",
+              "type": "integer"
+            },
+            "currentSalaryMin": {
+              "format": "int32",
+              "description": "当前薪资下限",
+              "type": "integer"
+            },
+            "currentSalaryMax": {
+              "format": "int32",
+              "description": "当前薪资上限",
+              "type": "integer"
+            },
+            "expectedSalary": {
+              "format": "string",
+              "description": "期望薪资",
+              "type": "string"
+            },
+            "expectedSalaryMin": {
+              "format": "int32",
+              "description": "期望薪资下限",
+              "type": "integer"
+            },
+            "expectedSalaryMax": {
+              "format": "int32",
+              "description": "期望薪资上限",
+              "type": "integer"
+            },
+            "expectedSalaryType": {
+              "format": "int32",
+              "description": "期望薪资类型",
+              "type": "integer"
+            },
+            "selfRemark": {
+              "format": "string",
+              "description": "自我评价",
+              "type": "string"
+            },
+            "otherInfo": {
+              "format": "string",
+              "description": "其他",
+              "type": "string"
+            },
+            "expectedLocations": {
+              "description": "期望地点",
+              "type": "array",
+              "items": {}
+            },
+            "expectedWorkTitle": {
+              "format": "string",
+              "description": "期望职位",
+              "type": "string"
+            },
+            "expectedIndustry": {
+              "description": "期望行业",
+              "type": "array",
+              "items": {}
+            },
+            "expectedPositionType": {
+              "format": "int32",
+              "description": "工作性质 全职，社会兼职，实习，学生兼职",
+              "type": "integer"
+            },
+            "workExperience": {
+              "format": "int32",
+              "description": "工作经验（年） 优先根据workStartTime计算工作经验展示",
+              "type": "integer"
+            },
+            "workStartTime": {
+              "format": "string",
+              "description": "工作开始时间",
+              "type": "string"
+            },
+            "works": {
+              "description": "工作经历",
+              "type": "array",
+              "items": {
+                "properties": {
+                  "company": {
+                    "format": "string",
+                    "description": "公司名称",
+                    "type": "string"
+                  },
+                  "industry": {
+                    "format": "string",
+                    "description": "行业",
+                    "type": "string"
+                  },
+                  "industryCode": {
+                    "format": "string",
+                    "description": "行业编码",
+                    "type": "string"
+                  },
+                  "type": {
+                    "format": "int32",
+                    "description": "公司性质",
+                    "type": "integer"
+                  },
+                  "scale": {
+                    "format": "int32",
+                    "description": "公司规模",
+                    "type": "integer"
+                  },
+                  "position": {
+                    "format": "string",
+                    "description": "职位",
+                    "type": "string"
+                  },
+                  "functionCode": {
+                    "format": "string",
+                    "description": "职能编码",
+                    "type": "string"
+                  },
+                  "department": {
+                    "format": "string",
+                    "description": "部门",
+                    "type": "string"
+                  },
+                  "rank": {
+                    "format": "string",
+                    "description": "职级",
+                    "type": "string"
+                  },
+                  "salary": {
+                    "format": "string",
+                    "description": "薪资",
+                    "type": "string"
+                  },
+                  "salaryType": {
+                    "format": "int32",
+                    "description": "薪资类型",
+                    "type": "integer"
+                  },
+                  "salaryMax": {
+                    "format": "int32",
+                    "description": "最高薪资",
+                    "type": "integer"
+                  },
+                  "salaryMin": {
+                    "format": "int32",
+                    "description": "最低薪资",
+                    "type": "integer"
+                  },
+                  "reportTo": {
+                    "format": "string",
+                    "description": "汇报对象",
+                    "type": "string"
+                  },
+                  "subordinatesCount": {
+                    "format": "int32",
+                    "description": "下属人数",
+                    "type": "integer"
+                  },
+                  "description": {
+                    "format": "string",
+                    "description": "工作内容",
+                    "type": "string"
+                  },
+                  "departure": {
+                    "format": "string",
+                    "description": "离职原因",
+                    "type": "string"
+                  },
+                  "startTime": {
+                    "format": "string",
+                    "description": "开始时间",
+                    "type": "string"
+                  },
+                  "endTime": {
+                    "format": "string",
+                    "description": "结束时间",
+                    "type": "string"
+                  },
+                  "soFar": {
+                    "format": "boolean",
+                    "description": "至今",
+                    "type": "boolean"
+                  },
+                  "top500": {
+                    "format": "boolean",
+                    "description": "是否是前500",
+                    "type": "boolean"
+                  },
+                  "isJoin": {
+                    "format": "boolean",
+                    "description": "是否是加入职位新增的简历",
+                    "type": "boolean"
+                  }
+                }
+              }
+            },
+            "projects": {
+              "description": "项目经历",
+              "type": "array",
+              "items": {
+                "properties": {
+                  "name": {
+                    "format": "string",
+                    "description": "项目名称",
+                    "type": "string"
+                  },
+                  "companyName": {
+                    "format": "string",
+                    "description": "公司名称",
+                    "type": "string"
+                  },
+                  "position": {
+                    "format": "string",
+                    "description": "职位名称",
+                    "type": "string"
+                  },
+                  "description": {
+                    "format": "string",
+                    "description": "项目描述",
+                    "type": "string"
+                  },
+                  "responsibilities": {
+                    "format": "string",
+                    "description": "项目职责",
+                    "type": "string"
+                  },
+                  "startTime": {
+                    "format": "string",
+                    "description": "开始时间",
+                    "type": "string"
+                  },
+                  "endTime": {
+                    "format": "string",
+                    "description": "结束时间",
+                    "type": "string"
+                  },
+                  "soFar": {
+                    "format": "boolean",
+                    "description": "至今",
+                    "type": "boolean"
+                  }
+                }
+              }
+            },
+            "educations": {
+              "description": "教育经历",
+              "type": "array",
+              "items": {
+                "properties": {
+                  "school": {
+                    "format": "string",
+                    "description": "学校名称",
+                    "type": "string"
+                  },
+                  "degree": {
+                    "format": "int32",
+                    "description": "学历",
+                    "type": "integer"
+                  },
+                  "subject": {
+                    "format": "string",
+                    "description": "专业",
+                    "type": "string"
+                  },
+                  "unifiedEnrolment": {
+                    "format": "string",
+                    "description": "是否统招(Y：是；N：否)",
+                    "type": "string"
+                  },
+                  "startTime": {
+                    "format": "string",
+                    "description": "开始时间",
+                    "type": "string"
+                  },
+                  "endTime": {
+                    "format": "string",
+                    "description": "结束时间",
+                    "type": "string"
+                  },
+                  "soFar": {
+                    "format": "boolean",
+                    "description": "至今",
+                    "type": "boolean"
+                  },
+                  "is985": {
+                    "format": "boolean",
+                    "description": "是否是985",
+                    "type": "boolean"
+                  },
+                  "is211": {
+                    "format": "boolean",
+                    "description": "是否是211",
+                    "type": "boolean"
+                  },
+                  "two": {
+                    "format": "boolean",
+                    "description": "是否是双一流",
+                    "type": "boolean"
+                  },
+                  "QS100": {
+                    "format": "boolean",
+                    "description": "是否是QS前100",
+                    "type": "boolean"
+                  },
+                  "isStudyAbroad": {
+                    "format": "boolean",
+                    "description": "是否留学",
+                    "type": "boolean"
+                  }
+                }
+              }
+            },
+            "skills": {
+              "description": "技能",
+              "type": "array",
+              "items": {
+                "properties": {
+                  "name": {
+                    "format": "string",
+                    "description": "技能名称",
+                    "type": "string"
+                  },
+                  "level": {
+                    "format": "int32",
+                    "description": "掌握程度",
+                    "type": "integer"
+                  }
+                }
+              }
+            },
+            "languages": {
+              "description": "语言",
+              "type": "array",
+              "items": {
+                "properties": {
+                  "name": {
+                    "format": "string",
+                    "description": "外语名称",
+                    "type": "string"
+                  },
+                  "level": {
+                    "format": "int32",
+                    "description": "掌握程度",
+                    "type": "integer"
+                  }
+                }
+              }
+            },
+            "trainings": {
+              "description": "培训",
+              "type": "array",
+              "items": {
+                "properties": {
+                  "description": {
+                    "format": "string",
+                    "description": "培训内容",
+                    "type": "string"
+                  },
+                  "authority": {
+                    "format": "string",
+                    "description": "培训机构",
+                    "type": "string"
+                  },
+                  "startTime": {
+                    "format": "string",
+                    "description": "开始时间",
+                    "type": "string"
+                  },
+                  "endTime": {
+                    "format": "string",
+                    "description": "结束时间",
+                    "type": "string"
+                  },
+                  "soFar": {
+                    "format": "boolean",
+                    "description": "至今",
+                    "type": "boolean"
+                  }
+                }
+              }
+            },
+            "certificates": {
+              "description": "证书",
+              "type": "array",
+              "items": {
+                "properties": {
+                  "name": {
+                    "format": "string",
+                    "description": "证书名称",
+                    "type": "string"
+                  },
+                  "startTime": {
+                    "format": "string",
+                    "description": "获取时间",
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "resumeFiles": {
+              "description": "简历附件(object)",
+              "type": "object",
+              "properties": {
+                "original": {
+                  "description": "原始简历",
+                  "type": "array",
+                  "items": {}
+                },
+                "certificate": {
+                  "description": "证书附件",
+                  "type": "array",
+                  "items": {}
+                },
+                "report": {
+                  "description": "推荐报告",
+                  "type": "array",
+                  "items": {}
+                }
+              }
+            },
+            "createdBy": {
+              "description": "创建人(object)",
+              "type": "object",
+              "properties": {
+                "coId": {
+                  "format": "int32",
+                  "description": "No comments found.",
+                  "type": "integer"
+                },
+                "orgId": {
+                  "format": "int32",
+                  "description": "No comments found.",
+                  "type": "integer"
+                },
+                "uid": {
+                  "format": "int32",
+                  "description": "No comments found.",
+                  "type": "integer"
+                },
+                "appId": {
+                  "format": "int32",
+                  "description": "No comments found.",
+                  "type": "integer"
+                },
+                "termId": {
+                  "format": "int32",
+                  "description": "No comments found.",
+                  "type": "integer"
+                }
+              }
+            },
+            "folderIds": {
+              "description": "加入的文件夹id",
+              "type": "array",
+              "items": {}
+            },
+            "createdAt": {
+              "format": "string",
+              "description": "创建时间",
+              "type": "string"
+            },
+            "updatedAt": {
+              "format": "string",
+              "description": "更新时间",
+              "type": "string"
+            },
+            "tags": {
+              "description": "简历标签(object)",
+              "type": "object",
+              "properties": {
+                "industries": {
+                  "description": "行业信息",
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "tagName": {
+                        "format": "string",
+                        "description": "tag 名称",
+                        "type": "string"
+                      },
+                      "tagWeight": {
+                        "format": "double",
+                        "description": "tag 权重",
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "posTags": {
+                  "description": "职位信息",
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "tagName": {
+                        "format": "string",
+                        "description": "tag 名称",
+                        "type": "string"
+                      },
+                      "tagWeight": {
+                        "format": "double",
+                        "description": "tag 权重",
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "posTypes": {
+                  "description": "职位类型",
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "tagName": {
+                        "format": "string",
+                        "description": "tag 名称",
+                        "type": "string"
+                      },
+                      "tagWeight": {
+                        "format": "double",
+                        "description": "tag 权重",
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "skillsTags": {
+                  "description": "技能标签",
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "tagName": {
+                        "format": "string",
+                        "description": "tag 名称",
+                        "type": "string"
+                      },
+                      "tagWeight": {
+                        "format": "double",
+                        "description": "tag 权重",
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "is985": {
+              "format": "boolean",
+              "description": "是否985",
+              "type": "boolean"
+            },
+            "is211": {
+              "format": "boolean",
+              "description": "是否211",
+              "type": "boolean"
+            },
+            "two": {
+              "format": "boolean",
+              "description": "是否是双一流",
+              "type": "boolean"
+            },
+            "qs100": {
+              "format": "boolean",
+              "description": "是否是QS前100",
+              "type": "boolean"
+            },
+            "isUnifiedEnrolment": {
+              "format": "boolean",
+              "description": "是否统招",
+              "type": "boolean"
+            },
+            "isStudyAbroad": {
+              "format": "boolean",
+              "description": "是否留学",
+              "type": "boolean"
+            },
+            "reTag": {
+              "format": "boolean",
+              "description": "是否需要重打标签<br>职位、行业、技能、教育经历 有修改时需要",
+              "type": "boolean"
+            },
+            "highlights": {
+              "description": "简历亮点",
+              "type": "array",
+              "items": {
+                "properties": {
+                  "code": {
+                    "format": "int32",
+                    "description": "简历评估code",
+                    "type": "integer"
+                  },
+                  "tag": {
+                    "format": "string",
+                    "description": "标签",
+                    "type": "string"
+                  },
+                  "desc": {
+                    "format": "string",
+                    "description": "评估详情",
+                    "type": "string"
+                  },
+                  "attribute": {
+                    "description": "No comments found.",
+                    "type": "array",
+                    "items": {}
+                  }
+                }
+              }
+            },
+            "risk": {
+              "description": "简历风险点",
+              "type": "array",
+              "items": {
+                "properties": {
+                  "code": {
+                    "format": "int32",
+                    "description": "简历评估code",
+                    "type": "integer"
+                  },
+                  "tag": {
+                    "format": "string",
+                    "description": "标签",
+                    "type": "string"
+                  },
+                  "desc": {
+                    "format": "string",
+                    "description": "评估详情",
+                    "type": "string"
+                  },
+                  "attribute": {
+                    "description": "No comments found.",
+                    "type": "array",
+                    "items": {}
+                  }
+                }
+              }
+            },
+            "industry": {
+              "description": "行业",
+              "type": "array",
+              "items": {}
+            },
+            "function": {
+              "description": "职能",
+              "type": "array",
+              "items": {}
+            },
+            "industryCode": {
+              "description": "行业编码",
+              "type": "array",
+              "items": {}
+            },
+            "functionCode": {
+              "description": "职能编码",
+              "type": "array",
+              "items": {}
+            },
+            "expectFunction": {
+              "description": "期望职能",
+              "type": "array",
+              "items": {}
+            },
+            "expectFunctionCode": {
+              "description": "期望职能Code",
+              "type": "array",
+              "items": {}
+            },
+            "expectedIndustryCode": {
+              "description": "期望行业code",
+              "type": "array",
+              "items": {}
+            },
+            "lastAddDate": {
+              "format": "string",
+              "description": "最后联系时间",
+              "type": "string"
+            },
+            "isAuthorized": {
+              "format": "boolean",
+              "description": "是否取得授权",
+              "type": "boolean"
+            },
+            "candidateUid": {
+              "format": "int32",
+              "description": "关联C端用户<br>当前C端只有微信登录，关联到C端用户则显示微信绑定标记<br>如添加其他社交平台登录这里逻辑要改",
+              "type": "integer"
+            },
+            "resumeLock": {
+              "description": "简历锁定状态(object)",
+              "type": "object",
+              "properties": {
+                "coId": {
+                  "format": "int32",
+                  "description": "No comments found.",
+                  "type": "integer"
+                },
+                "orgId": {
+                  "format": "int32",
+                  "description": "No comments found.",
+                  "type": "integer"
+                },
+                "uid": {
+                  "format": "int32",
+                  "description": "No comments found.",
+                  "type": "integer"
+                },
+                "appId": {
+                  "format": "int32",
+                  "description": "No comments found.",
+                  "type": "integer"
+                },
+                "termId": {
+                  "format": "int32",
+                  "description": "No comments found.",
+                  "type": "integer"
+                },
+                "locked": {
+                  "format": "boolean",
+                  "description": "是否锁定",
+                  "type": "boolean"
+                },
+                "updatedAt": {
+                  "format": "string",
+                  "description": "操作时间 锁定时间/手动解锁时间",
+                  "type": "string"
+                },
+                "expireAt": {
+                  "format": "string",
+                  "description": "过期时间 自动解锁时间/禁止锁定结束时间",
+                  "type": "string"
+                }
+              }
+            },
+            "publicRemarkedBy": {
+              "description": "公开备注人",
+              "type": "array",
+              "items": {}
+            },
+            "privateRemarkedBy": {
+              "description": "私有备注人",
+              "type": "array",
+              "items": {}
+            },
+            "isDeleted": {
+              "format": "boolean",
+              "description": "是否已删除",
+              "type": "boolean"
+            },
+            "mergedTo": {
+              "format": "int64",
+              "description": "合并后对应的简历id",
+              "type": "integer"
+            }
+          }
+        },
+        "code": {
+          "format": "int32",
+          "description": "识别异常",
+          "type": "integer"
+        },
+        "message": {
+          "format": "string",
+          "description": "错误信息",
+          "type": "string"
+        },
+        "repeatedResume": {
+          "description": "重复简历(object)",
+          "type": "object",
+          "properties": {
+            "id": {
+              "format": "int64",
+              "description": "简历id",
+              "type": "integer"
+            },
+            "channel": {
+              "format": "int32",
+              "description": "简历渠道 ChannelEnum",
+              "type": "integer"
+            },
+            "otherChannelName": {
+              "format": "string",
+              "description": "其他渠道名称",
+              "type": "string"
+            },
+            "createWay": {
+              "format": "int32",
+              "description": "简历入库方式 CreateWayEnum",
+              "type": "integer"
+            },
+            "completeScore": {
+              "format": "int32",
+              "description": "简历完整度 0~100",
+              "type": "integer"
+            },
+            "photo": {
+              "format": "string",
+              "description": "照片",
+              "type": "string"
+            },
+            "name": {
+              "format": "string",
+              "description": "姓名",
+              "type": "string"
+            },
+            "gender": {
+              "format": "string",
+              "description": "性别 M:男/F:女",
+              "type": "string"
+            },
+            "birth": {
+              "format": "string",
+              "description": "出生日期",
+              "type": "string"
+            },
+            "age": {
+              "format": "int8",
+              "description": "年龄",
+              "type": "integer"
+            },
+            "birthFromAge": {
+              "format": "boolean",
+              "description": "birth是否由age换算",
+              "type": "boolean"
+            },
+            "degree": {
+              "format": "int32",
+              "description": "学历 解析时直接获取。标准简历取教育经历 最高学历",
+              "type": "integer"
+            },
+            "currentLocation": {
+              "format": "string",
+              "description": "现居城市",
+              "type": "string"
+            },
+            "phoneRegionCode": {
+              "format": "string",
+              "description": "电话国家代码",
+              "type": "string"
+            },
+            "phone": {
+              "format": "string",
+              "description": "电话",
+              "type": "string"
+            },
+            "phoneCheck": {
+              "description": "电话空号检测(object)",
+              "type": "object",
+              "properties": {
+                "status": {
+                  "format": "int8",
+                  "description": "号码状态 0-空号，1-实号，2-停机，3-库无，4-沉默号，5-风险号",
+                  "type": "integer"
+                },
+                "updatedAt": {
+                  "format": "string",
+                  "description": "检查时间",
+                  "type": "string"
+                }
+              }
+            },
+            "virtualPhone": {
+              "format": "string",
+              "description": "虚拟电话",
+              "type": "string"
+            },
+            "virtualPhoneTime": {
+              "format": "string",
+              "description": "虚拟电话到期时间",
+              "type": "string"
+            },
+            "otherPhoneRegionCode": {
+              "format": "string",
+              "description": "更多电话国家代码",
+              "type": "string"
+            },
+            "otherPhone": {
+              "format": "string",
+              "description": "更多电话",
+              "type": "string"
+            },
+            "otherPhoneCheck": {
+              "description": "更多电话空号检测(object)",
+              "type": "object",
+              "properties": {
+                "status": {
+                  "format": "int8",
+                  "description": "号码状态 0-空号，1-实号，2-停机，3-库无，4-沉默号，5-风险号",
+                  "type": "integer"
+                },
+                "updatedAt": {
+                  "format": "string",
+                  "description": "检查时间",
+                  "type": "string"
+                }
+              }
+            },
+            "email": {
+              "format": "string",
+              "description": "邮箱",
+              "type": "string"
+            },
+            "otherEmail": {
+              "format": "string",
+              "description": "更多邮箱",
+              "type": "string"
+            },
+            "wechat": {
+              "format": "string",
+              "description": "微信",
+              "type": "string"
+            },
+            "cardType": {
+              "format": "int32",
+              "description": "证件类型",
+              "type": "integer"
+            },
+            "card": {
+              "format": "string",
+              "description": "证件",
+              "type": "string"
+            },
+            "nativePlace": {
+              "format": "string",
+              "description": "籍贯",
+              "type": "string"
+            },
+            "marital": {
+              "format": "string",
+              "description": "婚姻状况(Y：已婚；N：未婚)",
+              "type": "string"
+            },
+            "race": {
+              "format": "int32",
+              "description": "民族",
+              "type": "integer"
+            },
+            "nationality": {
+              "format": "string",
+              "description": "国籍",
+              "type": "string"
+            },
+            "politicalStatus": {
+              "format": "string",
+              "description": "政治面貌",
+              "type": "string"
+            },
+            "height": {
+              "format": "int32",
+              "description": "身高 (cm)",
+              "type": "integer"
+            },
+            "weight": {
+              "format": "int32",
+              "description": "体重（kg）",
+              "type": "integer"
+            },
+            "currentStatus": {
+              "format": "int32",
+              "description": "求职意向",
+              "type": "integer"
+            },
+            "currentType": {
+              "format": "int32",
+              "description": "求职类型",
+              "type": "integer"
+            },
+            "currentSalary": {
+              "format": "string",
+              "description": "当前薪资",
+              "type": "string"
+            },
+            "currentSalaryType": {
+              "format": "int32",
+              "description": "当前薪资类型",
+              "type": "integer"
+            },
+            "currentSalaryMin": {
+              "format": "int32",
+              "description": "当前薪资下限",
+              "type": "integer"
+            },
+            "currentSalaryMax": {
+              "format": "int32",
+              "description": "当前薪资上限",
+              "type": "integer"
+            },
+            "expectedSalary": {
+              "format": "string",
+              "description": "期望薪资",
+              "type": "string"
+            },
+            "expectedSalaryMin": {
+              "format": "int32",
+              "description": "期望薪资下限",
+              "type": "integer"
+            },
+            "expectedSalaryMax": {
+              "format": "int32",
+              "description": "期望薪资上限",
+              "type": "integer"
+            },
+            "expectedSalaryType": {
+              "format": "int32",
+              "description": "期望薪资类型",
+              "type": "integer"
+            },
+            "selfRemark": {
+              "format": "string",
+              "description": "自我评价",
+              "type": "string"
+            },
+            "otherInfo": {
+              "format": "string",
+              "description": "其他",
+              "type": "string"
+            },
+            "expectedLocations": {
+              "description": "期望地点",
+              "type": "array",
+              "items": {}
+            },
+            "expectedWorkTitle": {
+              "format": "string",
+              "description": "期望职位",
+              "type": "string"
+            },
+            "expectedIndustry": {
+              "description": "期望行业",
+              "type": "array",
+              "items": {}
+            },
+            "expectedPositionType": {
+              "format": "int32",
+              "description": "工作性质 全职，社会兼职，实习，学生兼职",
+              "type": "integer"
+            },
+            "workExperience": {
+              "format": "int32",
+              "description": "工作经验（年） 优先根据workStartTime计算工作经验展示",
+              "type": "integer"
+            },
+            "workStartTime": {
+              "format": "string",
+              "description": "工作开始时间",
+              "type": "string"
+            },
+            "works": {
+              "description": "工作经历",
+              "type": "array",
+              "items": {
+                "properties": {
+                  "company": {
+                    "format": "string",
+                    "description": "公司名称",
+                    "type": "string"
+                  },
+                  "industry": {
+                    "format": "string",
+                    "description": "行业",
+                    "type": "string"
+                  },
+                  "industryCode": {
+                    "format": "string",
+                    "description": "行业编码",
+                    "type": "string"
+                  },
+                  "type": {
+                    "format": "int32",
+                    "description": "公司性质",
+                    "type": "integer"
+                  },
+                  "scale": {
+                    "format": "int32",
+                    "description": "公司规模",
+                    "type": "integer"
+                  },
+                  "position": {
+                    "format": "string",
+                    "description": "职位",
+                    "type": "string"
+                  },
+                  "functionCode": {
+                    "format": "string",
+                    "description": "职能编码",
+                    "type": "string"
+                  },
+                  "department": {
+                    "format": "string",
+                    "description": "部门",
+                    "type": "string"
+                  },
+                  "rank": {
+                    "format": "string",
+                    "description": "职级",
+                    "type": "string"
+                  },
+                  "salary": {
+                    "format": "string",
+                    "description": "薪资",
+                    "type": "string"
+                  },
+                  "salaryType": {
+                    "format": "int32",
+                    "description": "薪资类型",
+                    "type": "integer"
+                  },
+                  "salaryMax": {
+                    "format": "int32",
+                    "description": "最高薪资",
+                    "type": "integer"
+                  },
+                  "salaryMin": {
+                    "format": "int32",
+                    "description": "最低薪资",
+                    "type": "integer"
+                  },
+                  "reportTo": {
+                    "format": "string",
+                    "description": "汇报对象",
+                    "type": "string"
+                  },
+                  "subordinatesCount": {
+                    "format": "int32",
+                    "description": "下属人数",
+                    "type": "integer"
+                  },
+                  "description": {
+                    "format": "string",
+                    "description": "工作内容",
+                    "type": "string"
+                  },
+                  "departure": {
+                    "format": "string",
+                    "description": "离职原因",
+                    "type": "string"
+                  },
+                  "startTime": {
+                    "format": "string",
+                    "description": "开始时间",
+                    "type": "string"
+                  },
+                  "endTime": {
+                    "format": "string",
+                    "description": "结束时间",
+                    "type": "string"
+                  },
+                  "soFar": {
+                    "format": "boolean",
+                    "description": "至今",
+                    "type": "boolean"
+                  },
+                  "top500": {
+                    "format": "boolean",
+                    "description": "是否是前500",
+                    "type": "boolean"
+                  },
+                  "isJoin": {
+                    "format": "boolean",
+                    "description": "是否是加入职位新增的简历",
+                    "type": "boolean"
+                  }
+                }
+              }
+            },
+            "projects": {
+              "description": "项目经历",
+              "type": "array",
+              "items": {
+                "properties": {
+                  "name": {
+                    "format": "string",
+                    "description": "项目名称",
+                    "type": "string"
+                  },
+                  "companyName": {
+                    "format": "string",
+                    "description": "公司名称",
+                    "type": "string"
+                  },
+                  "position": {
+                    "format": "string",
+                    "description": "职位名称",
+                    "type": "string"
+                  },
+                  "description": {
+                    "format": "string",
+                    "description": "项目描述",
+                    "type": "string"
+                  },
+                  "responsibilities": {
+                    "format": "string",
+                    "description": "项目职责",
+                    "type": "string"
+                  },
+                  "startTime": {
+                    "format": "string",
+                    "description": "开始时间",
+                    "type": "string"
+                  },
+                  "endTime": {
+                    "format": "string",
+                    "description": "结束时间",
+                    "type": "string"
+                  },
+                  "soFar": {
+                    "format": "boolean",
+                    "description": "至今",
+                    "type": "boolean"
+                  }
+                }
+              }
+            },
+            "educations": {
+              "description": "教育经历",
+              "type": "array",
+              "items": {
+                "properties": {
+                  "school": {
+                    "format": "string",
+                    "description": "学校名称",
+                    "type": "string"
+                  },
+                  "degree": {
+                    "format": "int32",
+                    "description": "学历",
+                    "type": "integer"
+                  },
+                  "subject": {
+                    "format": "string",
+                    "description": "专业",
+                    "type": "string"
+                  },
+                  "unifiedEnrolment": {
+                    "format": "string",
+                    "description": "是否统招(Y：是；N：否)",
+                    "type": "string"
+                  },
+                  "startTime": {
+                    "format": "string",
+                    "description": "开始时间",
+                    "type": "string"
+                  },
+                  "endTime": {
+                    "format": "string",
+                    "description": "结束时间",
+                    "type": "string"
+                  },
+                  "soFar": {
+                    "format": "boolean",
+                    "description": "至今",
+                    "type": "boolean"
+                  },
+                  "is985": {
+                    "format": "boolean",
+                    "description": "是否是985",
+                    "type": "boolean"
+                  },
+                  "is211": {
+                    "format": "boolean",
+                    "description": "是否是211",
+                    "type": "boolean"
+                  },
+                  "two": {
+                    "format": "boolean",
+                    "description": "是否是双一流",
+                    "type": "boolean"
+                  },
+                  "QS100": {
+                    "format": "boolean",
+                    "description": "是否是QS前100",
+                    "type": "boolean"
+                  },
+                  "isStudyAbroad": {
+                    "format": "boolean",
+                    "description": "是否留学",
+                    "type": "boolean"
+                  }
+                }
+              }
+            },
+            "skills": {
+              "description": "技能",
+              "type": "array",
+              "items": {
+                "properties": {
+                  "name": {
+                    "format": "string",
+                    "description": "技能名称",
+                    "type": "string"
+                  },
+                  "level": {
+                    "format": "int32",
+                    "description": "掌握程度",
+                    "type": "integer"
+                  }
+                }
+              }
+            },
+            "languages": {
+              "description": "语言",
+              "type": "array",
+              "items": {
+                "properties": {
+                  "name": {
+                    "format": "string",
+                    "description": "外语名称",
+                    "type": "string"
+                  },
+                  "level": {
+                    "format": "int32",
+                    "description": "掌握程度",
+                    "type": "integer"
+                  }
+                }
+              }
+            },
+            "trainings": {
+              "description": "培训",
+              "type": "array",
+              "items": {
+                "properties": {
+                  "description": {
+                    "format": "string",
+                    "description": "培训内容",
+                    "type": "string"
+                  },
+                  "authority": {
+                    "format": "string",
+                    "description": "培训机构",
+                    "type": "string"
+                  },
+                  "startTime": {
+                    "format": "string",
+                    "description": "开始时间",
+                    "type": "string"
+                  },
+                  "endTime": {
+                    "format": "string",
+                    "description": "结束时间",
+                    "type": "string"
+                  },
+                  "soFar": {
+                    "format": "boolean",
+                    "description": "至今",
+                    "type": "boolean"
+                  }
+                }
+              }
+            },
+            "certificates": {
+              "description": "证书",
+              "type": "array",
+              "items": {
+                "properties": {
+                  "name": {
+                    "format": "string",
+                    "description": "证书名称",
+                    "type": "string"
+                  },
+                  "startTime": {
+                    "format": "string",
+                    "description": "获取时间",
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "resumeFiles": {
+              "description": "简历附件(object)",
+              "type": "object",
+              "properties": {
+                "original": {
+                  "description": "原始简历",
+                  "type": "array",
+                  "items": {}
+                },
+                "certificate": {
+                  "description": "证书附件",
+                  "type": "array",
+                  "items": {}
+                },
+                "report": {
+                  "description": "推荐报告",
+                  "type": "array",
+                  "items": {}
+                }
+              }
+            },
+            "createdBy": {
+              "description": "创建人(object)",
+              "type": "object",
+              "properties": {
+                "coId": {
+                  "format": "int32",
+                  "description": "No comments found.",
+                  "type": "integer"
+                },
+                "orgId": {
+                  "format": "int32",
+                  "description": "No comments found.",
+                  "type": "integer"
+                },
+                "uid": {
+                  "format": "int32",
+                  "description": "No comments found.",
+                  "type": "integer"
+                },
+                "appId": {
+                  "format": "int32",
+                  "description": "No comments found.",
+                  "type": "integer"
+                },
+                "termId": {
+                  "format": "int32",
+                  "description": "No comments found.",
+                  "type": "integer"
+                }
+              }
+            },
+            "folderIds": {
+              "description": "加入的文件夹id",
+              "type": "array",
+              "items": {}
+            },
+            "createdAt": {
+              "format": "string",
+              "description": "创建时间",
+              "type": "string"
+            },
+            "updatedAt": {
+              "format": "string",
+              "description": "更新时间",
+              "type": "string"
+            },
+            "tags": {
+              "description": "简历标签(object)",
+              "type": "object",
+              "properties": {
+                "industries": {
+                  "description": "行业信息",
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "tagName": {
+                        "format": "string",
+                        "description": "tag 名称",
+                        "type": "string"
+                      },
+                      "tagWeight": {
+                        "format": "double",
+                        "description": "tag 权重",
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "posTags": {
+                  "description": "职位信息",
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "tagName": {
+                        "format": "string",
+                        "description": "tag 名称",
+                        "type": "string"
+                      },
+                      "tagWeight": {
+                        "format": "double",
+                        "description": "tag 权重",
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "posTypes": {
+                  "description": "职位类型",
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "tagName": {
+                        "format": "string",
+                        "description": "tag 名称",
+                        "type": "string"
+                      },
+                      "tagWeight": {
+                        "format": "double",
+                        "description": "tag 权重",
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "skillsTags": {
+                  "description": "技能标签",
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "tagName": {
+                        "format": "string",
+                        "description": "tag 名称",
+                        "type": "string"
+                      },
+                      "tagWeight": {
+                        "format": "double",
+                        "description": "tag 权重",
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "is985": {
+              "format": "boolean",
+              "description": "是否985",
+              "type": "boolean"
+            },
+            "is211": {
+              "format": "boolean",
+              "description": "是否211",
+              "type": "boolean"
+            },
+            "two": {
+              "format": "boolean",
+              "description": "是否是双一流",
+              "type": "boolean"
+            },
+            "qs100": {
+              "format": "boolean",
+              "description": "是否是QS前100",
+              "type": "boolean"
+            },
+            "isUnifiedEnrolment": {
+              "format": "boolean",
+              "description": "是否统招",
+              "type": "boolean"
+            },
+            "isStudyAbroad": {
+              "format": "boolean",
+              "description": "是否留学",
+              "type": "boolean"
+            },
+            "reTag": {
+              "format": "boolean",
+              "description": "是否需要重打标签<br>职位、行业、技能、教育经历 有修改时需要",
+              "type": "boolean"
+            },
+            "highlights": {
+              "description": "简历亮点",
+              "type": "array",
+              "items": {
+                "properties": {
+                  "code": {
+                    "format": "int32",
+                    "description": "简历评估code",
+                    "type": "integer"
+                  },
+                  "tag": {
+                    "format": "string",
+                    "description": "标签",
+                    "type": "string"
+                  },
+                  "desc": {
+                    "format": "string",
+                    "description": "评估详情",
+                    "type": "string"
+                  },
+                  "attribute": {
+                    "description": "No comments found.",
+                    "type": "array",
+                    "items": {}
+                  }
+                }
+              }
+            },
+            "risk": {
+              "description": "简历风险点",
+              "type": "array",
+              "items": {
+                "properties": {
+                  "code": {
+                    "format": "int32",
+                    "description": "简历评估code",
+                    "type": "integer"
+                  },
+                  "tag": {
+                    "format": "string",
+                    "description": "标签",
+                    "type": "string"
+                  },
+                  "desc": {
+                    "format": "string",
+                    "description": "评估详情",
+                    "type": "string"
+                  },
+                  "attribute": {
+                    "description": "No comments found.",
+                    "type": "array",
+                    "items": {}
+                  }
+                }
+              }
+            },
+            "industry": {
+              "description": "行业",
+              "type": "array",
+              "items": {}
+            },
+            "function": {
+              "description": "职能",
+              "type": "array",
+              "items": {}
+            },
+            "industryCode": {
+              "description": "行业编码",
+              "type": "array",
+              "items": {}
+            },
+            "functionCode": {
+              "description": "职能编码",
+              "type": "array",
+              "items": {}
+            },
+            "expectFunction": {
+              "description": "期望职能",
+              "type": "array",
+              "items": {}
+            },
+            "expectFunctionCode": {
+              "description": "期望职能Code",
+              "type": "array",
+              "items": {}
+            },
+            "expectedIndustryCode": {
+              "description": "期望行业code",
+              "type": "array",
+              "items": {}
+            },
+            "lastAddDate": {
+              "format": "string",
+              "description": "最后联系时间",
+              "type": "string"
+            },
+            "isAuthorized": {
+              "format": "boolean",
+              "description": "是否取得授权",
+              "type": "boolean"
+            },
+            "candidateUid": {
+              "format": "int32",
+              "description": "关联C端用户<br>当前C端只有微信登录，关联到C端用户则显示微信绑定标记<br>如添加其他社交平台登录这里逻辑要改",
+              "type": "integer"
+            },
+            "resumeLock": {
+              "description": "简历锁定状态(object)",
+              "type": "object",
+              "properties": {
+                "coId": {
+                  "format": "int32",
+                  "description": "No comments found.",
+                  "type": "integer"
+                },
+                "orgId": {
+                  "format": "int32",
+                  "description": "No comments found.",
+                  "type": "integer"
+                },
+                "uid": {
+                  "format": "int32",
+                  "description": "No comments found.",
+                  "type": "integer"
+                },
+                "appId": {
+                  "format": "int32",
+                  "description": "No comments found.",
+                  "type": "integer"
+                },
+                "termId": {
+                  "format": "int32",
+                  "description": "No comments found.",
+                  "type": "integer"
+                },
+                "locked": {
+                  "format": "boolean",
+                  "description": "是否锁定",
+                  "type": "boolean"
+                },
+                "updatedAt": {
+                  "format": "string",
+                  "description": "操作时间 锁定时间/手动解锁时间",
+                  "type": "string"
+                },
+                "expireAt": {
+                  "format": "string",
+                  "description": "过期时间 自动解锁时间/禁止锁定结束时间",
+                  "type": "string"
+                }
+              }
+            },
+            "publicRemarkedBy": {
+              "description": "公开备注人",
+              "type": "array",
+              "items": {}
+            },
+            "privateRemarkedBy": {
+              "description": "私有备注人",
+              "type": "array",
+              "items": {}
+            },
+            "isDeleted": {
+              "format": "boolean",
+              "description": "是否已删除",
+              "type": "boolean"
+            },
+            "mergedTo": {
+              "format": "int64",
+              "description": "合并后对应的简历id",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    }
+  },
+  "code": {
+    "format": "int32",
+    "description": "No comments found.",
+    "type": "integer"
+  }
+}

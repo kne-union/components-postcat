@@ -1,7 +1,7 @@
 import style from './style.module.scss';
 
-const Test = () => {
+const Project = () => {
     return <div>unleash creativity</div>;
 };
 
-export default Test;
+export default Project;

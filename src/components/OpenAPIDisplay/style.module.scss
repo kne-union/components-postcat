@@ -1,0 +1,75 @@
+.request-method {
+  font-weight: 700;
+
+  &-post {
+    color: var(--color-success);
+  }
+
+  &-get {
+    color: #165dff;
+  }
+
+  &-put {
+    color: rgb(130, 174, 70);
+  }
+
+  &-options,
+  &-delete {
+    color: inherit;
+  }
+
+  &-head,
+  &-patch {
+    color: var(--warning-color);
+  }
+}
+
+.collapse-wrapper {
+  :global {
+    .ant-collapse {
+      border: none !important;
+    }
+
+    .ant-collapse-content-box, .ant-card-body {
+      padding: 0 !important;
+    }
+  }
+}
+
+.path-line {
+  font-size: 16px;
+  width: 100%;
+
+  :global {
+    .ant-space-item:last-of-type {
+      border-radius: 4px;
+      border: solid var(--font-color-grey-4) 1px;
+      padding: 4px 10px;
+      flex: 1;
+    }
+  }
+}
+
+.header-info {
+  background: var(--bg-color-grey-1);
+  padding: 8px 10px;
+  margin-bottom: 20px;
+
+  :global {
+    .ant-col:first-of-type {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
+
+.menu-url {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 8px;
+}
+
+.api-description {
+  padding: 8px;
+}

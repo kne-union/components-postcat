@@ -1,0 +1,24 @@
+{
+  "isFull": true,
+  "list": [
+    {
+      "title": "Format Response",
+      "description": "格式化OpenApi，显示文档和编辑",
+      "code": "./base.js",
+      "scope": [
+        {
+          "name": "_OpenAPIDisplay",
+          "packageName": "@components/OpenAPIDisplay"
+        },
+        {
+          "name": "reactFetch",
+          "packageName": "@kne/react-fetch"
+        },
+        {
+          "name": "remoteLoader",
+          "packageName": "@kne/remote-loader"
+        }
+      ]
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 
-# Test
+# TabsPage
 
 
 ### 概述
 
-
+多页签页面
 
 
 ### 示例
@@ -13,12 +13,12 @@
 
 - 这里填写示例标题
 - 这里填写示例说明
-- _Test(@components/Test)
+- _TabsPage(@components/TabsPage)
 
 ```jsx
-const {default:Test} = _Test;
+const {default:TabsPage} = _TabsPage;
 const BaseExample = ()=>{
-    return <Test />;
+    return <TabsPage />;
 };
 
 render(<BaseExample />);

@@ -1,0 +1,24 @@
+{
+  "isFull": false,
+  "list": [
+    {
+      "title": "这里填写示例标题",
+      "description": "这里填写示例说明",
+      "code": "./base.js",
+      "scope": [
+        {
+          "name": "_Env",
+          "packageName": "@components/Env"
+        },
+        {
+          "name": "remoteLoader",
+          "packageName": "@kne/remote-loader"
+        },
+        {
+          "name": "lodash",
+          "packageName": "lodash"
+        }
+      ]
+    }
+  ]
+}

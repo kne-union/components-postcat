@@ -10,23 +10,20 @@ const componentsCoreRemote = {
     remote: "components-core",
     url: "https://registry.npmmirror.com",
     tpl: "{{url}}/@kne-components%2f{{remote}}/{{version}}/files/build",
-    defaultVersion: '0.1.12',
+    defaultVersion: '0.1.15',
 };
 
 remoteLoaderPreset({
     remotes: {
-        default: componentsCoreRemote,
-        'components-core': componentsCoreRemote,
-        'components-iconfont':{
+        default: componentsCoreRemote, 'components-core': componentsCoreRemote, 'components-iconfont': {
             remote: "components-iconfont",
             url: "https://registry.npmmirror.com",
             tpl: "{{url}}/@kne-components%2f{{remote}}/{{version}}/files/build",
             defaultVersion: '0.1.3',
-        },
-        'components-name': process.env.NODE_ENV === 'development' ? {
-            remote: 'components-name', url: '/', tpl: '{{url}}'
+        }, 'components-postcat': process.env.NODE_ENV === 'development' ? {
+            remote: 'components-postcat', url: '/', tpl: '{{url}}'
         } : {
-            remote: 'components-name',
+            remote: 'components-postcat',
             url: 'https://registry.npmmirror.com',
             tpl: '{{url}}/@kne-components%2f{{remote}}/{{version}}/files/build',
             defaultVersion: process.env.DEFAULT_VERSION

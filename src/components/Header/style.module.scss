@@ -1,0 +1,19 @@
+.header {
+  background: var(--bg-color-grey);
+  padding: 0 32px;
+  height: var(--nav-height);
+  line-height: var(--nav-height);
+
+  .header-row {
+    height: var(--nav-height);
+  }
+
+  .logo {
+    width: 120px;
+    height: 40px;
+
+    img {
+      width: 100%;
+    }
+  }
+}

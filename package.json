@@ -1,7 +1,6 @@
 {
-  "name": "components-postcat",
+  "name": "@kne-components/components-postcat",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -9,7 +8,7 @@
   },
   "scripts": {
     "start": "cross-env PORT=3001 MODULES_DEV_PUBLIC_URL=/ craco start",
-    "build": "cross-env COMPONENTS_NAME=components-name MODULES_DEV_PUBLIC_URL=/components-name  craco build",
+    "build": "cross-env COMPONENTS_NAME=components-postcat MODULES_DEV_PUBLIC_URL=/components-postcat  craco build",
     "test": "craco test --coverage",
     "eject": "react-scripts eject",
     "init": "npm i --legacy-peer-deps",
