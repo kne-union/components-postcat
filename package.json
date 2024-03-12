@@ -1,6 +1,9 @@
 {
   "name": "@kne-components/components-postcat",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "files": [
+    "build"
+  ],
   "description": "实现openApi的管理",
   "dependencies": {
     "localforage": "^1.10.0",
