@@ -1,0 +1,50 @@
+{
+  "get": {
+    "summary": "get link",
+    "deprecated": false,
+    "description": "get link",
+    "tags": ["附件"],
+    "responses": {
+      "200": {
+        "description": "OK",
+        "content": {
+          "*/*": {
+            "schema": {
+              "$ref": "#/components/schemas/_api_v1_attachment_get_linkresponse"
+            },
+            "examples": {
+              "json": {
+                "summary": "test data",
+                "value": "{\n  \"msg\": \"dzktfo\",\n  \"data\": \"6zin48\",\n  \"code\": 993\n}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "operationId": "79134069122d0c1d3d962c679f317fcc",
+    "parameters": [
+      {
+        "schema": {
+          "type": "string"
+        },
+        "in": "query",
+        "description": "附件id",
+        "required": true,
+        "example": "77",
+        "name": "id"
+      },
+      {
+        "schema": {
+          "format": "string",
+          "type": "string"
+        },
+        "in": "header",
+        "description": "招聘平台用户jwt",
+        "required": true,
+        "example": "",
+        "name": "X-FAT-TOKEN"
+      }
+    ]
+  }
+}
