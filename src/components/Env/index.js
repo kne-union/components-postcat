@@ -3,23 +3,26 @@ import {useRef} from 'react';
 import {Space, Button, App} from "antd";
 import getColumns from './getColumns';
 import FormInner from './FormInner';
+import {useProps} from "../../commons/context";
 
 const Env = createWithRemoteLoader({
     modules: ['components-core:Layout@TablePage', 'components-core:Global@usePreset', 'FormInfo@useFormModal']
-})(({remoteModules}) => {
+})(({remoteModules, data, ...props}) => {
     const [TablePage, usePreset, useFormModal] = remoteModules;
     const {ajax, apis} = usePreset();
+    const {apis: propsApis} = useProps();
     const formModal = useFormModal();
     const {message} = App.useApp();
     const ref = useRef();
-    return <TablePage {...apis.postcat.getEnvList} ref={ref} name="env" page={{
-        title: "环境", titleExtra: <Space>
+    const {getEnvList, doDeleteEnv, doAddEnv, doEditEnv} = Object.assign({}, apis.postcat, propsApis)
+    return <TablePage {...Object.assign({}, getEnvList)} params={{projectId: data.id}} ref={ref} name="env" page={{
+        ...props, titleExtra: <Space>
             <Button type="primary" onClick={() => {
                 const formModalApi = formModal({
-                    title: "添加环境", size: 'small', formProps: {
+                    title: "添加环境", formProps: {
                         onSubmit: async (formData) => {
-                            const {data: resData} = await ajax(Object.assign({}, apis.postcat.doAddEnv, {
-                                data: formData
+                            const {data: resData} = await ajax(Object.assign({}, doAddEnv, {
+                                data: Object.assign({}, formData, {projectId: data.id})
                             }));
 
                             if (resData.code !== 0) {
@@ -37,9 +40,9 @@ const Env = createWithRemoteLoader({
         name: "options", title: "操作", type: "options", fixed: "right", valueOf: (item) => [{
             onClick: () => {
                 const formModalApi = formModal({
-                    title: "编辑环境", size: 'small', formProps: {
+                    title: "编辑环境", formProps: {
                         data: item, onSubmit: async (formData) => {
-                            const {data: resData} = await ajax(Object.assign({}, apis.postcat.doEditEnv, {
+                            const {data: resData} = await ajax(Object.assign({}, doEditEnv, {
                                 data: Object.assign({}, formData, {id: item.id})
                             }));
                             if (resData.code !== 0) {
@@ -55,7 +58,7 @@ const Env = createWithRemoteLoader({
             }, children: "编辑"
         }, {
             onClick: async () => {
-                const {data: resData} = await ajax(Object.assign({}, apis.postcat.doDeleteEnv, {
+                const {data: resData} = await ajax(Object.assign({}, doDeleteEnv, {
                     data: {id: item.id}
                 }));
                 if (resData.code !== 0) {

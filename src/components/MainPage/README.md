@@ -1,6 +1,24 @@
-const {default: PostCat} = _PostCat;
+
+# MainPage
+
+
+### 概述
+
+项目主页面
+
+
+### 示例
+
+#### 示例代码
+
+- 这里填写示例标题
+- 这里填写示例说明
+- _MainPage(@components/MainPage),remoteLoader(@kne/remote-loader),lodash(lodash),router(react-router-dom)
+
+```jsx
+const {default: MainPage} = _MainPage;
 const {createWithRemoteLoader} = remoteLoader;
-const {useLocation, Routes, Route, Navigate} = router;
+const {useLocation} = router;
 const {getPublicPath} = remoteLoader;
 const BaseExample = createWithRemoteLoader({
     modules: ['components-core:Global@PureGlobal', 'components-core:Layout', 'components-core:Global@usePreset']
@@ -76,13 +94,19 @@ const BaseExample = createWithRemoteLoader({
         }
     }}>
         <Layout navigation={{isFixed: false}}>
-            <Routes>
-                <Route path={baseUrl + '/*'} element={<PostCat baseUrl={baseUrl} menuFixed={false}/>}/>
-                <Route path="*" element={<Navigate to={baseUrl}/>}/>
-            </Routes>
+            <MainPage menuFixed={false} baseUrl={baseUrl}/>
         </Layout>
 
     </PureGlobal>;
 });
 
 render(<BaseExample/>);
+
+```
+
+
+### API
+
+|属性名|说明|类型|默认值|
+|  ---  | ---  | --- | --- |
+

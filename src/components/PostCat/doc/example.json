@@ -9,6 +9,17 @@
         {
           "name": "_PostCat",
           "packageName": "@components/PostCat"
+        },{
+          "name": "remoteLoader",
+          "packageName": "@kne/remote-loader"
+        },
+        {
+          "name": "lodash",
+          "packageName": "lodash"
+        },
+        {
+          "name": "router",
+          "packageName": "react-router-dom"
         }
       ]
     }

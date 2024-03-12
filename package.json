@@ -2,9 +2,11 @@
   "name": "@kne-components/components-postcat",
   "version": "0.1.0",
   "dependencies": {
+    "localforage": "^1.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.0"
+    "react-scripts": "^5.0.0",
+    "uuid": "^9.0.1"
   },
   "scripts": {
     "start": "cross-env PORT=3001 MODULES_DEV_PUBLIC_URL=/ craco start",

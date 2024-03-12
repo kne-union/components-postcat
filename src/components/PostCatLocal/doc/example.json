@@ -7,16 +7,19 @@
       "code": "./base.js",
       "scope": [
         {
-          "name": "_Project",
-          "packageName": "@components/Project"
-        },
-        {
+          "name": "_PostCatLocal",
+          "packageName": "@components/PostCatLocal"
+        },{
           "name": "remoteLoader",
           "packageName": "@kne/remote-loader"
         },
         {
           "name": "lodash",
           "packageName": "lodash"
+        },
+        {
+          "name": "router",
+          "packageName": "react-router-dom"
         }
       ]
     }

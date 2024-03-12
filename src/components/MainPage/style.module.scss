@@ -1,0 +1,15 @@
+.setting-item {
+  flex: 1;
+}
+
+.setting-item-col {
+  color: var(--font-color-grey-1);
+}
+
+.header {
+  :global {
+    .ant-breadcrumb-link {
+      cursor: pointer;
+    }
+  }
+}

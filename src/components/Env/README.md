@@ -58,7 +58,7 @@ const BaseExample = createWithRemoteLoader({
         }
     }}>
         <Layout navigation={{isFixed: false}}>
-            <Env/>
+            <Env data={{id:'123'}}/>
         </Layout>
 
     </PureGlobal>;
