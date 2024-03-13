@@ -1,5 +1,5 @@
 import {createWithRemoteLoader} from '@kne/remote-loader';
-import {Button, List, Row, Col} from 'antd';
+import {Button, List, Row, Col, message} from 'antd';
 import IncludeApisButton from './IncludeApisButton';
 import ExportApisButton from './ExportApisButton';
 import ExportProjectButton from './ExportProjectButton';
@@ -7,13 +7,14 @@ import IncludeProjectButton from './IncludeProjectButton';
 import style from './style.module.scss';
 import {useNavigate} from "react-router-dom";
 import {useBaseUrl} from "../../commons/context";
+import project from "../Project";
 
 const Setting = createWithRemoteLoader({
-    modules: ['components-core:Layout@Page', 'components-core:Global@usePreset']
+    modules: ['components-core:Layout@Page', 'components-core:Global@usePreset', 'components-core:ConfirmButton']
 })(({remoteModules, data, apis: propsApis, ...props}) => {
-    const [Page, usePreset] = remoteModules;
-    const {apis} = usePreset();
-    const {doInclude, doDeleteProject} = Object.assign({}, apis.postcat, propsApis);
+    const [Page, usePreset, ConfirmButton] = remoteModules;
+    const {ajax, apis} = usePreset();
+    const {doDeleteProject} = Object.assign({}, apis.postcat, propsApis);
     const baseUrl = useBaseUrl();
     const navigate = useNavigate();
     return <Page {...props}>
@@ -54,7 +55,13 @@ const Setting = createWithRemoteLoader({
                 <Row align="middle" gutter={10} className={style['setting-item']}>
                     <Col>删除项目</Col>
                     <Col flex='auto' className={style['setting-item-col']}>删除当前项目</Col>
-                    <Col><Button danger type="primary">删除项目</Button></Col>
+                    <Col><ConfirmButton danger type="primary" onClick={async () => {
+                        const {data: resData} = await ajax(Object.assign({}, doDeleteProject, {data: {id: data.id}}));
+                        if (resData.code === 0) {
+                            message.success('删除项目成功');
+                            navigate(baseUrl);
+                        }
+                    }}>删除项目</ConfirmButton></Col>
                 </Row>
             </List.Item>
         </List>
